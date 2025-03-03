@@ -12,7 +12,7 @@ const Dashboard = () => {
     useEffect(() => {
         if (token) {
             axios
-                .get("http://localhost:3000/api/gettodo", {
+                .get("https://quiz-backend-4ecb.onrender.com/api/gettodo", {
                     headers: { "x-token": token }
                 })
                 .then((res) => setTodos(res.data.message))
@@ -26,7 +26,7 @@ const Dashboard = () => {
 
         axios
             .post(
-                "http://localhost:3000/api/addtodo",
+                "https://quiz-backend-4ecb.onrender.com/api/addtodo",
                 { title: newTodo },
                 { headers: { "x-token": token } }
             )
@@ -41,7 +41,7 @@ const Dashboard = () => {
     const updateTodo = (id, completed) => {
         axios
             .put(
-                `http://localhost:3000/api/update/${id}`,
+                `https://quiz-backend-4ecb.onrender.com/api/update/${id}`,
                 { completed: !completed },
                 { headers: { "x-token": token } }
             )
@@ -54,7 +54,7 @@ const Dashboard = () => {
     // Delete Todo
     const deleteTodo = (id) => {
         axios
-            .delete(`http://localhost:3000/api/delete/${id}`, {
+            .delete(`https://quiz-backend-4ecb.onrender.com/api/delete/${id}`, {
                 headers: { "x-token": token }
             })
             .then(() => {

@@ -18,7 +18,7 @@ const Login = () => {
     }
     const submithandler= e=>{
         e.preventDefault();
-        axios.post('http://localhost:3000/api/login',data).then(
+        axios.post('https://quiz-backend-4ecb.onrender.com/api/login',data).then(
             res => setToken(res.data.token)
         )
     }

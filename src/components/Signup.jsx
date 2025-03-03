@@ -12,7 +12,7 @@ const Signup = () => {
     }
     const submithandler= e=>{
         e.preventDefault();
-        axios.post('http://localhost:3000/api/register',data).then(
+        axios.post('https://quiz-backend-4ecb.onrender.com/api/register',data).then(
             res => alert(JSON.stringify(res.data))
         )
     }
