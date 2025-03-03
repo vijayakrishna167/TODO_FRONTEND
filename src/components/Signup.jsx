@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import axios from 'axios'
-
+import './styles/signup.css'
 const Signup = () => {
     const [data,setData]=useState({
         name:'',
@@ -17,9 +17,9 @@ const Signup = () => {
         )
     }
   return (
-    <div>
+    <div className="signup-container">
         <center>
-            <form onSubmit={submithandler}>
+            <form onSubmit={submithandler} className="signup-form">
                 <h3>Signup</h3>
                 <input type='text' name='name' onChange={changehandler} placeholder='enter your name'/><br/>
                 <input type='email' name='email'onChange={changehandler} placeholder='enter email'/><br/>

@@ -15,8 +15,9 @@ const App = () => {
       <store.Provider value={[token,setToken]}>
       <BrowserRouter>
       <Navbar/>
-      <Home/>
+      {/* <Home/> */}
       <Routes>
+          <Route path='/' element={<Home/>}/>
           <Route path='/signup' element={<Signup />} />
           <Route path='/login' element={<Login />} />
           <Route path='/dashboard' element={<Dashboard />} />

@@ -13,7 +13,7 @@ const Home = () => {
                         meet deadlines, and achieve your goals.
                     </p>
                     <button className="home-button">
-                        Start for Free <i className="fas fa-arrow-right"></i>
+                        Start for Free 
                     </button>
                 </div>
                 <div className="home-image">
